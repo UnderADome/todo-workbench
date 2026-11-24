@@ -1,0 +1,50 @@
+{
+  "name": "todolist-workspace",
+  "version": "0.6.0",
+  "description": "TodoList 五列待办工作台",
+  "main": "./out/main/index.js",
+  "author": "TodoList",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node scripts/electron-vite.cjs dev",
+    "start": "node scripts/electron-vite.cjs preview",
+    "build": "electron-vite build",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
+    "typecheck": "npm run typecheck:node && npm run typecheck:web",
+    "test:smoke": "node scripts/smoke.cjs",
+    "test:smoke2": "node scripts/smoke2.cjs",
+    "test:smoke3": "node scripts/smoke3.cjs",
+    "test:smoke4": "node scripts/smoke4.cjs",
+    "test:smoke5": "node scripts/smoke5.cjs",
+    "test:smoke6": "node scripts/smoke6.cjs",
+    "test:smoke7": "node scripts/smoke7.cjs",
+    "test:smoke8": "node scripts/smoke8.cjs",
+    "test:smoke9": "node scripts/smoke9.cjs",
+    "test:smoke10": "node scripts/smoke10.cjs",
+    "dist": "npm run build && electron-builder --win nsis",
+    "postinstall": "electron-builder install-app-deps",
+    "test:smoke11": "node scripts/smoke11.cjs"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.2.0",
+    "date-fns": "^4.4.0",
+    "lucide-react": "^1.73.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zustand": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "electron": "^45.3.3",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "playwright-core": "^1.65.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}

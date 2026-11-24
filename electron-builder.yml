@@ -1,0 +1,28 @@
+appId: com.todolist.workspace
+productName: 待办工作台
+directories:
+  buildResources: resources
+  output: release
+files:
+  - out/**/*
+  - package.json
+extraResources:
+  - from: resources/icon.png
+    to: icon.png
+  - from: resources/tray.png
+    to: tray.png
+asar: true
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: resources/icon.ico
+  artifactName: ${productName}-${version}-setup.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: 待办工作台
+  deleteAppDataOnUninstall: false
