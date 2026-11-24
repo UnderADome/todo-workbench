@@ -32,3 +32,18 @@ packaged-screen.png
 /待确认问题清单*.md
 /日期聚合规则设计*.md
 /工程实施任务清单.md
+
+# 本地配置与密钥（避免误提交）
+.env
+.env.*
+!.env.example
+.claude/settings.json
+.claude/settings.local.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+id_rsa*
+id_ed25519*
+secrets.*
